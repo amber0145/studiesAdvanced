@@ -18,23 +18,23 @@
         console.log ('結束') 
 */
         //--------------------------------------------
-/*
+
         //Q2：閏年判斷
 const year =2000;
-console.log('${year}是閏年：${((year % 4 === 0 )&& (year %100 !== 0)) || (year % 400 === 0) }');
+console.log(`${year}是閏年：${((year % 4 === 0 )&& (year %100 !== 0)) || (year % 400 === 0) }`);
         //--------------------------------------------
-*/
+
     //Q3BMI值判定
 const hight =175;
 const weight =70;
-const bmi = (weight / (hight/100)**2);
+const bmi = (weight / (hight/100)**2).toFixed(1);
+let status = '';
+    if (bmi < 18.5) status ='過輕';   
+    else if (18.5 - 24.9) status ='正常'; 
+    else if (25 - 29.9) status ='過重';    
+    else status ='肥胖';
 
-    if (bmi < 18.5) console.log('過輕');   
-    else if (18.5 - 24.9) console.log('正常'); 
-    else if (25 - 29.9) console.log('過重');    
-    else console.log('肥胖');
-
-console.log('身高:' + hight + 'cm, 體重:' + weight + 'kg, BMI值:' + bmi.toFixed(1));
+console.log('身高:' + hight + 'cm, 體重:' + weight + 'kg, BMI值:' + bmi +'體重狀態:' + status) ;
    </script> 
 </body>
 </html>
