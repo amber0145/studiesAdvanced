@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //正列適合用來計算
+    const student1Name = {
+        name: "小明",
+        age:18,
+        scoreEn:60,
+        scoreMt:99,
+    }
+     const student2ame = {
+        name: "阿花",
+        age:69,
+        scoreEn:99,
+        scoreMt:99,
+        ismale:true,
+        hobbies:["reading","gaming","coding"],
+        addresl:"Taipei",
+        zipCde:'2345',
+        contry:"Taiwan",
+        street:'No.123, Sec. 1, Zhongshan Rd.',
+
+    }
+    greet:funtion()
+        console.log(Hello);
+    
+
+        const getValue1=std1.name;
+        const getValue2=std1['name'];   
+        const getValue3=std1.['hobbies'][1];
+        const getValue4=std1.hoobbies[1];
+
+        const key name='age';
+
+        stud1.name='max';
+        stud1.keyName=50;//這裡的keyName不是變數(value為age)是object key
+        std1['age']=30;//find key age, by string it's success
+        std1[keyName]=40;//find key age, by variable it's success
+
+        if(std1.address&&std1.address.city) {
+        const cityUC=std1.address.toUpperCase();
+        console.log(`welcome to ${cityUC}`);
+        }else{
+        console.log((`Welcome`)); 
+        }   
+        const cityUC= stud1.address?.toUpperCase();
+        console.log(cityUC?`welcome to ${cityUC}` :  `wlcome`);
+       //如果 || 只要可以視為false的都會往後跑(讀取default)
+       //如果 ?? 只要有 null 跟 undefined 才會往後跑(讀取default)
+        let cityUC= stud1.address?.toUpperCase()??'TAIWAN';
+        
+        console.log(`welcome to ${stud1.address?.toUpperCase()??'TAIWAN'}`);
+
+        console.clease();
+        //-----------------------
+        const std2 = 
+        {
+        name: "小華",
+        age: 22,
+        major: "資訊工程",
+        grade: "大三"
+        };
+        for (const key in std2) 
+        {
+        console.log(`value: ${std2[key]}`);
+        consloe.log(`key:${key} ,value ${std2[key]}`);
+        }
+
+        console.clear();
+        //-----------------------
+        Array.isArray(std2);//true
+        Object.keys(std2);//['name','age','major','grade']
+        Object.values(std2);//['小華',22,'資訊工程','大三']
+        
+        age in std2;//true
+        if('age' in std2){console.log('key=>age in std2');}
+
+    </script>
+
+</body>
+</html>

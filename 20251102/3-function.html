@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+console.log("歡迎來到我們的網站！");
+console.log("今天是美好的一天！");
+console.log("=============================");
+console.log("歡迎來到我們的網站！");
+console.log("今天是美好的一天！");
+console.log("=============================");
+console.log("歡迎來到我們的網站！");
+console.log("今天是美好的一天！");
+console.log("=============================");
+
+function showwlcome()
+ //宣告FN Browser 每次執行都先讀取 FN 宣告 才會開始跑script 代碼，因此不會受宣告順序影響
+console.log("歡迎來到我們的網站！");
+console.log("=============================");
+
+}
+
+console.clear();
+*/
+function show2(name)
+{//FN 宣告時可以要求參數
+console.log(hello!${name});
+console.log("=============================");
+}
+
+show2("阿花");
+show2("阿明");
+show2("");
+ 
+console.clear();
+function sum(a,b)
+{
+    console .log(`計算${a}+${b}的結果是:${a+b}`);
+}
+
+sum(3,5);
+sum(20,20,30); //多餘參數不會被使用
+
+
+if(typeof a==='number'&&typeof b==='number')
+console .log(`計算${a}+${b}的結果是:${a+b}`);
+else
+console .log('參考不足，無法計算');
+
+function total(ary)
+{
+    let s=0;
+    for(const num of ary) 
+    {
+        //if (typeof num !=='number')continue //脫離數字
+        if(typeof num!=='number')return NaN; //回傳NaN
+        sum+=num;
+    }
+    console.log('done')
+      return sum;//將結果回傳給呼叫處   
+}
+const myTotal= calcTotal([10,20,'STR',40,50])
+console.log(`計算結果是:${myTotal}`);
+
+console.clear();
+
+function sub(a,b=0)
+{
+    console.log(`計算${a}-${b}的結果是:$[a-B}`);
+}
+console.clear();
+
+const subArrow=(a,b=0)=>
+{
+// console.log(`計算${a}-${b})的結果是:${a}-${b）}
+};
+const subArrow=(a,b=0)=>console.log(`$${a}-${b}`)
+subArrow(10,8);
+const subArrow=(a,b=0)=>a-b;
+console.log(subArrow(10,8));
+const square=(n)=>{
+    erturn n**2;
+}
+const square=n=>n**2;
+console.log(square(3));
+
+const sayhi=() =>console.log(123);
+console.clear( );
+//-----------------匿名函式-----------
+console.log(addSum(10,20));
+//const addSum=finction(a,b){//這個變數addsum 裡面放著一個匿名函式，可以稱呼這個內容函式表式}
+//re
+const addSum=(a,b){
+    return a+b
+
+??
+const sayYes=function(a,b) 
+{
+    console.log('yes',v)
+};
+sayYes("H");
+const max ='123';//多餘，為何不直接輸出123需要額外用變數
+console.log('max');//多餘
+console.log('123')
+}
+//IIFE Immediately Invoked Function Expression 立即執行函數表達式
+(function(v){
+    console.log('yes')
+}) ('H');
+
+(function(){
+    console.log('yes')
+}) ('');
+((=>console.log('ya'))();
+console.clear();
+//---------------Fn應用在陣列的prototype
+
+let num=[1,2,3,4,5]
+function printE1(V){
+    console.log(V);
+}
+num.forEach(printE1)
+
+const tempFn=function(V,i){
+    console.log(v,i);
+};
+
+nameAry.forEach(function(V,i){
+    console.log(v,i);
+});
+nameAry.forEach(V=>console.log(V));
+//nameAry.forEach((v,i,ary)=>console.log(v,i,ary));
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//陣列
+console bry=[1,2,3]
+console bry=[1,2,3]
+console bry=bry1;
+//array 是一種特別的物件，此寫法將記憶體參考未制止給 bry3,
+// 因此如果詢問bury3===bury1 會得到 true
+
+//-------------------------------
+const cry1=["魚", "狗", "貓", "兔子",123,554,453]
+//const cry1=[1]="魚"
+let cry2=[AA,BB,CC,DD,EE]//let 可以修改陣列內容
+length=5;//修改陣列長度
+cry2[5]="FF"//新增陣列元素
+//------------------------
+cry1[1]='蝦米'//success
+
+cry1=[1,2,3]
+for (let i = 0; i < dry1.length; i++) 
+
+function myPrint(value,index)
+{
+console.log(value, index);
+dry1.forEach(myPrint);
+
+//
+// method1:指定fn
+// function myPrint(value){
+// console.log(value);
+//}
+// dry1.forEach(myPrint);
+
+// method2:匿名函式
+// dry1.forEach(function(value){
+// console.log(value);
+//});
+method3:箭頭函式
+
+dry1.forEach((val, idx)=>{
+// console.log(val, idx);
+console.log( dry1 ${idx} ${val});
+});
+
+for (const val of dry1){
+// console.log(val);
+// console.log(dry1.indexOf(val));
+console.log(在陣列 dry1 的第 ${dry1.indexof(val)}個值是 ${val}');
+}
+console.clear();
+
+
+//--------------新增/刪除陣列(FIFO LIFO)-----------------
+const ery1= ["蘋果", "香蕉", "橘子", 145, 130, 80];
+
+console num80=ery1.pop(); //從陣列尾端刪除一個值，並回傳該值
+ery1.push("西瓜"); // 在陣列尾端新增一個值，並回傳該值
+const apple = ery1.shift();//從陣列尾端刪除一個值，並回傳該值
+ery1.unshift("芭樂"); // 在陣列頭端新增一個值
+
+console.log(ery1); //{"芭樂","蘋果", "香蕉", "橘子", 145, 130, 80,"西瓜"]}
+   
+const ansIs3=ery1.indexOF(145);//return index number
+const hasbanana=ery1.includes("香蕉");//return boolean
+onst aryTOSt=ery1.toString();//return string
+const aryTOStWithJoin=ery1.join(" , ");//return string With join seperator
+
+ery1.splice(2,1,'葡萄','橘子');//從索引值2開始連續刪除1個元素，並加入'葡萄','橘子'
+console.log(ery1);//{"芭樂","蘋果", "葡萄","橘子", "橘子", 145, 130, 80,"西瓜"]}
+//	擷取陣列的一部分
+const aryBanana=ery1.slice(1,4);//從索引值1開始，擷取到索引值4(不包含4)為止的元素，回傳新陣列
+console.log(aryBanana);//{"蘋果", "葡萄","橘子"]}
+
+const aryFruiHas1=ery1.slice(1,2);//{"蘋果"}
+const aryFruiHas3=ery1.slice(2,5);//{"葡萄","橘子", "橘子"}
+const aryFruiHas4=ery1.slice(2);//{"葡萄","橘子", "橘子", 145, 130, 80,"西瓜"]}
+
+const aryFruitConcat=aryFuritHas.concat(aryFruiHas4,aryFruiHas1);//合併多個陣列，回傳新陣列
+console.log(aryFruitConcat);//{"葡萄","橘子", "橘子", 145, 130, 80,"西瓜","葡萄","橘子", "橘子", 145, 130, 80,"西瓜","蘋果"]}
+    
+console .clear();
+//-------------nested arry----------------
+const fry1=['aaa',ery1,true];
+const fry2=aryFruiHas1,aryFruiHas3,aryFruiHas4];
+const fry3=[['香蕉'], ['葡萄'，'桃子'], ['桃子', '西瓜']];
+const watermelon=fry3[2][1];//'西瓜'
+console.log('watermelon=',watermelon);
+
+fry3[2].splice(0,1,'芒果');//修改'西瓜'為'芒果'
+fry.splice(1,1,['草莓','藍莓']);//修改第二個元素為['草莓','藍莓']
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
