@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*function divide(a, b) {
+  
+    try {
+        if (b === 0) {
+            throw new Error('除數不能為零');
+        }
+        return a / b;
+    } catch (error) {
+        console.error('發生錯誤：', error.message);
+        return null;
+    } finally {
+        console.log('除法運算完成');
+    }
+}
+*/
+let ans='';
+try{
+    if(b===0)throw new Error('除數不能為零');
+    ans= a / b;
+}catch(error){
+    console.error(error.message);
+    ans=null;
+}finally{
+    return ans;
+}
+return 0;
+
+
+
+console.log(divide(10, 3)); // 正常情況
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+/*寫一個JS函式。產生1～46之間隨機不重複的六個號碼，並將結果由小大排序後回傳一個陣列*/
+//1
+/*const lotto =[];
+for(let i=1;i<=46;i++){
+const rend1to46=Math.floor=(Math.random()*46)+1;//1~46隨機數
+lotto.includes(rend1to46)?i--:lotto.push(rend1to46);
+    }
+
+//4
+const lottoSet=new Set();
+while(lottoSet.size<6)lottoSet.add(Math.floor(Math.random()*46)+1);
+console .log(Array.form(lottoSet).sort((a,b)=>a-b));
+*/
+
+const pool=Array.form({length:46},(_,i)=>i+1);selected=[];
+selected=[];
+while(selected.length<6){
+    selected.push(...pool.splice(Math.floor(Math.random()*pool.length),1));
+}    
+console.log(selected.sort((a,b)=>a-b));   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+</body>
+</html>

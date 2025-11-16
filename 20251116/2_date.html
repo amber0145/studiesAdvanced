@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const dateObj=new Date();//特過建構是建立Date物件
+const date=Date();//過函數回傳一個字串
+//--
+const now= new Date();
+console.log(`現在時間是:${now}`);
+
+const comeDate=new Date('2025-12-31 23:59:59Z');//iso格式
+
+constSomeDate=new Date(`2025-12-31T23:59:59Z`);//iso格式，結尾加Z，表示UTC+0時區
+console.log(`冰島(UTC+0)跨年時間時，台灣時間物件是:${newDate}`);
+const anotherDate=new Date(2025,11,31,23,59,59);//月份0~11=>jan~dec
+console.log(`台灣跨年時間(本地時間):${anotherDate}`);
+
+console.clear();
+
+//--
+
+console.log(`年份:${now.getFullYear()}`);
+const MothLabel=[`jan`,`Feb`,`Mar`,`Apr`,`May`,`Jun`,`Jul`,`Aug`,`Sep`,`Oct`,`Nov`,`Dec`];
+console.log(`月份(0~11):${now.getMonth()+1}`);//月份0~11
+console.log(`月份(index 0~11);${MothLabel[now.getMonth()]}`);
+
+console.log(`日期:${now.getDate()}`);//1~31
+const weekLabel=[`Sun`,`Mon`,`Tue`,`Wed`,`Thu`,`Fri`,`Sat`];
+console.log(`星期:${weekLabel[now.getDay()]}`);//0~6=>Sun~Sat
+//時分秒，毫秒
+console.log(`時:${now.getHours()}`);
+console.log(`分:${now.getMinutes()}`);  
+console.log(`秒:${now.getSeconds()}`);
+console.log(`毫秒:${now.getMilliseconds()}`);
+
+console.clear();
+
+//時間搓記 timestamp
+console.log(`從1970/1/1 00:00:00 UTC+0 到現在毫秒數${now.getTime()}`);
+console.log(now.toLocaleDateString());//本地格式顯示日期
+console.log(now.toLocaleTimeString());//本地格式顯示時間
+const TodayLastTime=new Date(2025,10,16,23,59,59,999);
+console.log(`今天結束時間挫記:${now.getTime()-nowTime()}`);//今天結束時間挫記
+//今天還剩下48677316毫秒=>算出小時 分 秒 毫秒
+
+const diffH=Math.floor(diffMs/(60*60*1000)%24);//1000*60*24 小時
+const diffM=Math.floor(diffMs%(60*60*1000)/(1000*60));//1000*60*60 分
+const diffS=Math.floor(diffMs/(1000*60*60)%(1000*60)/1000);//1000*60 秒
+const diffMS=diffMs%(1000*60*60)%(1000*60)%1000;//1000 毫秒
+
+/*
+const diffH=Math.floor(diffMs/(60*60*1000)%24);//1000*60*24 小時
+const diffM=Math.floor((diffMs/(60*1000))%60);//1000*60*60 分
+const diffS=Math.floor(diffMs/(1000)%60);//1000*60 秒
+const diffMS=Math.floor(diffMs/(1000));//1000 毫秒
+*/
+console.log(`今天還剩下${diffH}小時${diffM}分${diffS}秒${diffMS}毫秒`);
+
+console.clear();
+function getCountDownToNewYear(){
+    const now =new Date();
+    const nextYear=new Date(now.getFullYear()+1,0);
+    const diffAllMs=nextYear-now;//會自動轉成時相
+    const sec=Math.floor(diffAllMs/1000)%60;//   
+    const min=Math.floor(diffAllMs/1000/60)%60;
+    const hr=Math.floor(diffAllMs/(1000*60*60))%24;
+
+
+console.log(`距離跨年還剩下${diffD}天${diffH}時${diffM}分${diffS}秒`);
+
+getCountDownToNewYear();
+}
+console.clear();
+
+const testSetDaTe=new Date();
+console.log(testSetDaTe.toLocaleString());
+testSetDate.setHours(testSetDate.getHours()-12);
+console.log(testSetDate.toLocaleString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
