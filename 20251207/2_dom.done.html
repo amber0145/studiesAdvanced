@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+    <h1>員工旅遊參加意願表</h1>
+    <legend>員工資訊</legend>
+    <label for="username"></label>
+    <input type="text" id="username" placeholder="username">
+    <span>  </span>
+    <label for="uid">身分證字號：</label>
+    <input type="uid" id="uid" name="uid"><br><br>
+    </fieldset>
+
+    <fieldset>
+    <legend>參加意願</legend>
+    <input type="radio" id="attend_yes" name="attend" value="yes">
+    <label for="attend_yes">願意參加</label>
+    <span>  </span>
+    <input type="radio" id="attend_no" name="attend" value="no">
+    <label for="attend_no">不願意參加</label>
+    </fieldset>
+
+    <fieldset id = "companionInfo" style="display :none">;
+    <legend>攜伴資訊</legend>
+    <button type="button" id="'addCompnion">新增攜伴</button><br><br>
+    </fieldset>
+    <hr>
+    <input type="submit" value="Submit">
+    <form action=""></form>
+    <script>
+     //新增一組攜伴欄位的函式
+    const addOne=() => {
+    //由JS建立攜伴欄位
+    const companionDiv = document.createElement('div');
+    companionDiv.innerHTML = `
+    <label for="pUser[]">姓名 </label>
+    'input type="text" id="id="pUser[]" name="pUser[]">
+    <span>  </span>
+    label for="pId[]">身分證字號 </label>
+    input type="text" id="pId[]" name="pId[]">
+    span>  </span>
+    <input type="button" value="X">
+    <br><br>
+    ` 
+    </script>
+
+    //為建立的攜伴欄位綁定刪除事件
+    const removeBtn = companionDiv.querySelector('input[type="button"]');
+    removeBtn.addEventListener('click',function () {
+    companionDiv.remove();
+    });
+   documnet.getElementById('companionInfo').appendChild(companionDiv);
+    };
+
+    //新增一組攜伴按鈕
+    document.getElementById('comnionInFn').annend(comnaionDiv);
+    
+
+    </script>
+
+</body>
+</html>

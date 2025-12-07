@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+
+    button {
+      padding: 8px 16px;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+    }
+
+    input {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  #preview-block {
+    background-color: red;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+
+    &.square {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    &.circle {
+      clip-path: circle(50% at 50% 50%);
+    }
+
+    &.triangle {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &.star {
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+  }
+</style>
+
+<form class="form-container">
+  <button type="button" value="square">正方形</button>
+  <button type="button" value="circle">圓形</button>
+  <button type="button" value="triangle">三角形</button>
+  <button type="button" value="star">星星</button>
+  <input type="color" value="#ff0000" />
+</form>
+<hr />
+<div id="preview-block" class="square"></div>
+
+<script>
+//點選按鈕改變預覽區塊形狀
+const preview = document.getElementById("preview-block");
+const buttons = document.querySelectorAll(".form-container button");
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const shape = e.target.value;
+    preview.className = shape;
+  });
+});
+//改變顏色
+const colorInput = document.querySelector("input");
+colorInput.addEventListener("input", (e) => {
+  const color = e.target.value;
+  preview.style.backgroundColor = color;
+});
+
+//cary 
+const z = document.getElementById("preview-block");
+document.querySelecyor(".form-container").addEventListener("click",e=>e.target.tagName ==='BUTTON' && (z.className=e.target.value));
+document.querySelector('input[type="color"]').addEventListener("input",(e)=>)
+</script>
+</body>
+</html>

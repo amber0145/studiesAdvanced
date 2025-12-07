@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     })
+        <h1>主標題</h1>
+    <div id="container">
+        <p class="text"></p>這是第一段文字</p>
+        <p class="text red" id="red">第二段文字 </p>
+        <p class="text red" id="red">第二段文字 </p>
+        </p>這是第一段文字"></p>
+        <p class="這是第二段文字"></p>
+        <button>按鈕</button>
+    </div>
+    <hr>
+    <input type="text" name="inputField" value="預設值">
+
+        <script>
+
+        (()=>{ 
+        const elH1=document.getElementById("myTitle");
+        console.log(elH1);//Dom property 取得屬性
+        console.log(elH1.ciassName);//這是JS指令 className替代定義html 元素上的 class屬性
+        console.log(elH1.title);
+        console.log(elH1.dataset.loki);
+        //透過 getAttribute() 方法 取得html屬性
+        console.log(elH1.getAttribute("id"));            
+        console.log(elH1.getAttribute("class"));
+        console.log(elH1.getAttribute("title"));
+        console.log(elH1.getAttribute("data-loki"));
+        //----
+        elH1.className='new-class';//改變class屬性
+        elH1.setAttribute("class","new-attr");//改變title屬性
+      
+        //elH1.className='';
+        elH1.removeAttribute('class');
+        console.log(elH1.hasAttribute('class'));//檢查是否有此屬性
+      
+        })();
+      //property vs attribute 隨做改變，後者不便(初始值，不會隨使用者操作改變)
+        document.querySelector('input').getAttribute('value');//取得input 元素的 value屬性
+        document.querySelector('input').value;//取得input 元素的 value屬性 (
+      
+      const div=document.querySelector('.container');
+
+      //div.style.backgroundColor='lightblue';
+    div.classList.remove('new','text');
+    div.classList.add('new','text');
+
+    div.classList.toggle('toggle-class',);
+    div.classList.toggle('toggle-class',true);//第二參數 強制加入有(TURE)或沒有(FALSE),有點無用，因可改用ADD,remove來強制增加或減少
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </script>
+</body>
+</html>

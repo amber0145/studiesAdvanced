@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!--網頁內容多個元素組成-->
+    <h1>主標題</h1>
+    <div id="container">
+        <p class="text"></p>這是第一段文字</p>
+        <p class="text red" id="red">第二段文字 </p>
+        <p class="text red" id="red">第二段文字 </p>
+        </p>這是第一段文字"></p>
+        <p class="這是第二段文字"></p>
+        <button>按鈕</button>
+    </div>
+    <!--在這裡會定義一個script標籤，在這裡寫JS腳本，讓遊纜器去執行-->
+    <script>
+    //這裡開始是JS，可發現註解長不太一樣
+    //透過ID取的特定元素(傳統)
+    const elTitle=document.getElementById("myTitle");
+    console.log(elTitle);
+    //透過CSS 選擇器 取得單一元素(比較常用)
+    document.querySelector("#red");
+    document.querySelector(".text.red");
+    document.querySelector('.text:nth-child(2)');
+
+    //透過CSS 選擇器 取得多個元素 NodeList(比較常用)
+    const elAll=document.querySelectorAll(".text");
+    console.log(elAll);
+//-----------
+    //透過Tag name 取得 HTMLcollection 元素(很少用到)
+    const e1H1=document.getElementsByTagName("h1");
+    console.log(e1H1);  
+    
+    //透過Class name 取得 HTMLcollection 元素(很少用到)
+    const elClass=document.getElementsByTagName("p");
+    console.log(elClass);
+     //------
+     console.clear();
+     const elH1=e1document.getElementById("myTitle");
+     console.log('文字內容',e1H1.textContent);
+     console.textContent="透過JS改變的標題";
+
+     console.log(elH1.innerHTML);
+     e1H1.innerHTML="透過JS改變的標題<span style='color:red'>主標題</span>";
+
+     const elContainer=document.getElementById("container");
+     //elContainer.innerHTML"=<p>新增的段落</p>";
+     elContainer.innerHTML+="<p>新增的段落</p>";
+
+     
+     
+     
+     
+     
+     
+     
+     
+     </script>
+
+</body>
+</html>
